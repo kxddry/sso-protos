@@ -13,7 +13,7 @@ service Auth {
 message LoginRequest {
   string placeholder = 1;  // can be either email or username
   string password = 2;
-  int32 app_id = 3; // ID of the application requesting authentication
+  int64 app_id = 3; // ID of the application requesting authentication
 }
 
 message LoginResponse {
