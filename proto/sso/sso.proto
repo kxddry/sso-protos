@@ -8,6 +8,16 @@ service Auth {
   rpc Register(RegisterRequest) returns (RegisterResponse);
   rpc Login(LoginRequest) returns (LoginResponse);
   rpc IsAdmin(IsAdminRequest) returns (IsAdminResponse);
+  rpc AppID(AppRequest) returns (AppResponse); // Get AppID by sending an AppRequest
+}
+
+message AppRequest {
+  string name = 1;
+  string secret = 2;
+}
+
+message AppResponse {
+  int64 app_id = 1;
 }
 
 message LoginRequest {
