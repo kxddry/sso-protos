@@ -21,9 +21,9 @@ message AppResponse {
 }
 
 message LoginRequest {
-  string placeholder = 1;  // can be either email or username
+  string email = 1;
   string password = 2;
-  int64 app_id = 3; // ID of the application requesting authentication
+  int64 app_id = 3; // ID of the application requesting auth
 }
 
 message LoginResponse {
@@ -32,9 +32,9 @@ message LoginResponse {
 
 message RegisterRequest {
   string email = 1;
-  string username = 2;
-  string password = 3;
+  string password = 2;
 }
+
 message RegisterResponse {
   int64 user_id = 1;
 }
