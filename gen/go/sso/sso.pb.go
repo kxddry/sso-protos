@@ -4,7 +4,7 @@
 // 	protoc        v5.29.3
 // source: sso/sso.proto
 
-package ssorsa
+package ssov2
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -537,7 +537,7 @@ const file_sso_sso_proto_rawDesc = "" +
 	"\x05Login\x12\x12.auth.LoginRequest\x1a\x13.auth.LoginResponse\x126\n" +
 	"\aIsAdmin\x12\x14.auth.IsAdminRequest\x1a\x15.auth.IsAdminResponse\x12,\n" +
 	"\x05AppID\x12\x10.auth.AppRequest\x1a\x11.auth.AppResponse\x129\n" +
-	"\fGetPublicKey\x12\x13.auth.PubkeyRequest\x1a\x14.auth.PubkeyResponseB%Z#github.com/kxddry/sso-protos;ssorsab\x06proto3"
+	"\fGetPublicKey\x12\x13.auth.PubkeyRequest\x1a\x14.auth.PubkeyResponseB$Z\"github.com/kxddry/sso-protos;ssov2b\x06proto3"
 
 var (
 	file_sso_sso_proto_rawDescOnce sync.Once
