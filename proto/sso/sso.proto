@@ -9,6 +9,15 @@ service Auth {
   rpc Login(LoginRequest) returns (LoginResponse);
   rpc IsAdmin(IsAdminRequest) returns (IsAdminResponse);
   rpc AppID(AppRequest) returns (AppResponse); // Get AppID by sending an AppRequest
+  rpc GetPublicKey(PubkeyRequest) returns (PubkeyResponse);
+}
+
+message PubkeyRequest {}
+
+message PubkeyResponse {
+  string pubkey = 1;
+  string algorithm = 2;
+  string key_id = 3;
 }
 
 message AppRequest {
