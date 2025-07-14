@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package auth;
 
-option go_package = "github.com/kxddry/sso-protos;ssov2"; // idk why it's like this tbh
+option go_package = "github.com/kxddry/sso-protos;ssorsa"; // idk why it's like this tbh
 
 service Auth {
   rpc Register(RegisterRequest) returns (RegisterResponse);
@@ -13,7 +13,7 @@ service Auth {
 
 message AppRequest {
   string name = 1;
-  string secret = 2;
+  string pubkey = 2;
 }
 
 message AppResponse {

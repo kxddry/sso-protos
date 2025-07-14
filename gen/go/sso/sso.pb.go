@@ -4,7 +4,7 @@
 // 	protoc        v5.29.3
 // source: sso/sso.proto
 
-package ssov1
+package ssorsa
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -24,7 +24,7 @@ const (
 type AppRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Name          string                 `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
-	Secret        string                 `protobuf:"bytes,2,opt,name=secret,proto3" json:"secret,omitempty"`
+	Pubkey        string                 `protobuf:"bytes,2,opt,name=pubkey,proto3" json:"pubkey,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -66,9 +66,9 @@ func (x *AppRequest) GetName() string {
 	return ""
 }
 
-func (x *AppRequest) GetSecret() string {
+func (x *AppRequest) GetPubkey() string {
 	if x != nil {
-		return x.Secret
+		return x.Pubkey
 	}
 	return ""
 }
@@ -413,7 +413,7 @@ const file_sso_sso_proto_rawDesc = "" +
 	"\n" +
 	"AppRequest\x12\x12\n" +
 	"\x04name\x18\x01 \x01(\tR\x04name\x12\x16\n" +
-	"\x06secret\x18\x02 \x01(\tR\x06secret\"$\n" +
+	"\x06pubkey\x18\x02 \x01(\tR\x06pubkey\"$\n" +
 	"\vAppResponse\x12\x15\n" +
 	"\x06app_id\x18\x01 \x01(\x03R\x05appId\"W\n" +
 	"\fLoginRequest\x12\x14\n" +
@@ -435,7 +435,7 @@ const file_sso_sso_proto_rawDesc = "" +
 	"\bRegister\x12\x15.auth.RegisterRequest\x1a\x16.auth.RegisterResponse\x120\n" +
 	"\x05Login\x12\x12.auth.LoginRequest\x1a\x13.auth.LoginResponse\x126\n" +
 	"\aIsAdmin\x12\x14.auth.IsAdminRequest\x1a\x15.auth.IsAdminResponse\x12,\n" +
-	"\x05AppID\x12\x10.auth.AppRequest\x1a\x11.auth.AppResponseB$Z\"github.com/kxddry/sso-protos;ssov1b\x06proto3"
+	"\x05AppID\x12\x10.auth.AppRequest\x1a\x11.auth.AppResponseB%Z#github.com/kxddry/sso-protos;ssorsab\x06proto3"
 
 var (
 	file_sso_sso_proto_rawDescOnce sync.Once
